@@ -1,37 +1,43 @@
 "use client";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import Preloader from "./Preloader/Preloader";
+import Preloader from "../components/Preloader/Preloader";
+import Nav from "@/components/Shared/Nav";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
+    let locomotiveScroll: any;
+
     (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      if (typeof window !== "undefined") {
+        const LocomotiveScroll = (await import("locomotive-scroll")).default;
 
-      const locomotiveScroll = new LocomotiveScroll();
+        locomotiveScroll = new LocomotiveScroll();
 
-      setTimeout(() => {
-        setIsLoading(false);
+        setTimeout(() => {
+          setIsLoading(false);
+          document.body.style.cursor = "default";
+          window.scrollTo(0, 0);
+        }, 2000);
 
-        document.body.style.cursor = "default";
-
-        window.scrollTo(0, 0);
-      }, 2000);
+        // Show nav after loading
+        setIsActive(true);
+      }
     })();
+
+    return () => {
+      if (locomotiveScroll) locomotiveScroll.destroy();
+    };
   }, []);
+
   return (
-    <main>
+    <main className="bg-white">
       <AnimatePresence mode="wait">
-        {isLoading && <Preloader />}
+        {isLoading && <Preloader key="preloader" />}
       </AnimatePresence>
-      {/* <Landing /> */}
-      {/* 
-      <Description />
-      <Projects />
-      <SlidingImages />
-      <Contact /> */}
     </main>
   );
 }
