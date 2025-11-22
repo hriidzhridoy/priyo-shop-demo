@@ -3,6 +3,7 @@ import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import Preloader from "../components/Preloader/Preloader";
 import Nav from "@/components/Shared/Nav";
+import Newblock from "@/components/NewBlock/Newblock";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,10 +35,11 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="bg-white">
+    <main className="">
       <AnimatePresence mode="wait">
         {isLoading && <Preloader key="preloader" />}
       </AnimatePresence>
+      <Newblock className="pt-20 text-black bg-red-500 h-screen" />
     </main>
   );
 }
