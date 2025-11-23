@@ -42,31 +42,31 @@ const fmcgFeatures = [
     title: "Digitalization",
     description:
       "Helping MSMEs manage sourcing and inventory with a fully digital platform.",
-    icon: "📱",
+    icon: "https://priyoshopretail.com/wp-content/uploads/2025/09/Digitalization.webp",
   },
   {
     title: "Sales Booster",
     description:
       "Increase retail sales through better product access and reliable restocking.",
-    icon: "📈",
+    icon: "https://priyoshopretail.com/wp-content/uploads/2025/09/Sales-Booster.webp",
   },
   {
     title: "Time Saver",
     description:
       "Save time with easy ordering and fast delivery, right to retail shops.",
-    icon: "⏱️",
+    icon: "https://priyoshopretail.com/wp-content/uploads/2025/09/Time-Saver-1-1.webp",
   },
   {
     title: "Price Transparency",
     description:
       "Get fair, upfront pricing with no hidden charges across every order.",
-    icon: "💰",
+    icon: "https://priyoshopretail.com/wp-content/uploads/2025/09/Price-Transparency.webp",
   },
   {
     title: "Embedded Finance",
     description:
       "Empowering MSME purchasing power through embedded finance solutions.",
-    icon: "💳",
+    icon: "https://priyoshopretail.com/wp-content/uploads/2025/09/Untitled-1.png",
   },
 ];
 
@@ -187,8 +187,12 @@ export default function HeroText({ className }: HeroTextProps) {
                 key={feature.title}
                 className="flex flex-col items-center rounded-3xl bg-white/95 px-5 py-8 text-center shadow-[0_18px_60px_rgba(0,0,0,0.16)] backdrop-blur-xl transition-transform duration-300 hover:-translate-y-2"
               >
-                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#ffe1e6] text-2xl">
-                  {feature.icon}
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#ffe1e6] overflow-hidden">
+                  <img
+                    src={feature.icon}
+                    alt={feature.title}
+                    className="w-10 h-10 object-contain"
+                  />
                 </div>
                 <h4 className="mb-2 text-sm font-semibold text-[#e53344] md:text-base">
                   {feature.title}
