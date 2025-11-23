@@ -109,7 +109,7 @@ const AccordianAnimation = () => {
   };
 
   return (
-    <div className="relative  flex flex-col bg-primary/20 text-[#202020]">
+    <div className="relative  flex flex-col bg-primary/20 text-[#202020] sm:pb-20 ">
       <div className="max-w-screen mx-auto my-6 sm:my-auto px-4 md:px-24 w-full">
         {/* HEADER */}
         <div
