@@ -12,7 +12,9 @@ export default function Header() {
   return (
     <div className={styles.header}>
       <div className={styles.bar}>
-        <Link href="/">Olivier</Link>
+        <Link href="/">
+          <img src="/images/logo.png" alt="Logo" className="w-[110px] " />
+        </Link>
         <div
           onClick={() => {
             setIsActive(!isActive);
