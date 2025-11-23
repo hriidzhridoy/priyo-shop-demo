@@ -1,11 +1,11 @@
 "use client";
-import { AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
-import Preloader from "../components/Preloader/Preloader";
-import Newblock from "@/components/NewBlock/Newblock";
-import HeroText from "@/components/HeroText";
 
-export default function Home() {
+import Preloader from "@/components/Preloader/Preloader";
+import { AnimatePresence } from "framer-motion";
+import { div } from "framer-motion/client";
+import React, { useEffect, useState } from "react";
+
+export default function AboutPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [isActive, setIsActive] = useState(false);
 
@@ -22,7 +22,7 @@ export default function Home() {
           setIsLoading(false);
           document.body.style.cursor = "default";
           window.scrollTo(0, 0);
-        }, 2000);
+        }, 500);
 
         // Show nav after loading
         setIsActive(true);
@@ -34,23 +34,13 @@ export default function Home() {
     };
   }, []);
 
-  const greetings = [
-    "Hello",
-    "Bonjour",
-    "Ciao",
-    "Olà",
-    "やあ",
-    "Hallå",
-    "Guten tag",
-    "Hallo",
-  ];
+  const greetings = ["About Us"];
   return (
-    <main className="">
+    <div className="h-screen">
       <AnimatePresence mode="wait">
         {isLoading && <Preloader words={greetings} />}
       </AnimatePresence>
-      {/* <Newblock className="pt-20 text-black" /> */}
-      <HeroText />
-    </main>
+      Hello
+    </div>
   );
 }
