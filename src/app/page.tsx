@@ -35,14 +35,15 @@ export default function Home() {
   }, []);
 
   const greetings = [
-    "Hello",
-    "Bonjour",
-    "Ciao",
-    "Olà",
-    "やあ",
-    "Hallå",
-    "Guten tag",
-    "Hallo",
+    "Welcome",
+    "To",
+    " Largest ",
+    "B2B",
+    "Platform",
+    "in",
+    "Bangladesh",
+    "Priyo",
+    "Shop",
   ];
   return (
     <main className="">

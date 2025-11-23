@@ -43,9 +43,9 @@ export default function AboutPage() {
       </AnimatePresence>
       <MaskCursor
         initialSize={40}
-        hoverSize={400}
-        text="A visual designer — with skills that haven't been replaced by AI yet."
-        bodyText={`I'm a <span>selectively skilled</span> product designer with a strong focus on impactful experiences.`}
+        hoverSize={420}
+        text="PriyoShop is an AI-powered B2B marketplace using EV logistics & embedded finance to transform MSME retail."
+        bodyText="PriyoShop simplifying <span>supply chains</span>, unlocking <span>financial inclusion</span>, and empowering MSMEs across Bangladesh."
       />
     </div>
   );
