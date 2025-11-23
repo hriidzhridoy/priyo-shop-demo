@@ -21,11 +21,18 @@
     margin: 0px;
 }
 
-.bar a{
+/* 👇 Logo link: behaves like the old `.bar a` */
+.logo{
     text-decoration: none;
     color: black;
     position: absolute;
     left: 0;
+}
+
+/* 👇 Join Us link on the right, normal flow */
+.joinLink{
+    text-decoration: none;
+    color: black;
 }
 
 .shopContainer{
