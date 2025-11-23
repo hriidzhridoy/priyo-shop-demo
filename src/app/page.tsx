@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Preloader from "../components/Preloader/Preloader";
 import Newblock from "@/components/NewBlock/Newblock";
 import HeroText from "@/components/HeroText";
+import AccordianAnimation from "@/components/AccordionAnimation";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -52,6 +53,7 @@ export default function Home() {
       </AnimatePresence>
       {/* <Newblock className="pt-20 text-black" /> */}
       <HeroText />
+      <AccordianAnimation />
     </main>
   );
 }
