@@ -5,6 +5,7 @@ import Preloader from "../components/Preloader/Preloader";
 import Newblock from "@/components/NewBlock/Newblock";
 import HeroText from "@/components/HeroText";
 import AccordianAnimation from "@/components/AccordionAnimation";
+import ScrollStepsTimeline from "@/components/ScrollStepsTimeline";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -54,6 +55,7 @@ export default function Home() {
       {/* <Newblock className="pt-20 text-black" /> */}
       <HeroText />
       <AccordianAnimation />
+      <ScrollStepsTimeline />
     </main>
   );
 }
