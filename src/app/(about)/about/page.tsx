@@ -1,6 +1,7 @@
 "use client";
 
 import MaskCursor from "@/components/Mask Cursor/page";
+import PerspectiveImage from "@/components/PerspectiveImage/PerspectiveImage";
 import Preloader from "@/components/Preloader/Preloader";
 import { AnimatePresence } from "framer-motion";
 import { div } from "framer-motion/client";
@@ -37,7 +38,7 @@ export default function AboutPage() {
 
   const greetings = ["About Us"];
   return (
-    <div className="h-screen">
+    <div className="">
       <AnimatePresence mode="wait">
         {isLoading && <Preloader words={greetings} />}
       </AnimatePresence>
@@ -47,6 +48,7 @@ export default function AboutPage() {
         text="PriyoShop is an AI-powered B2B marketplace using EV logistics & embedded finance to transform MSME retail."
         bodyText="PriyoShop simplifying <span>supply chains</span>, unlocking <span>financial inclusion</span>, and empowering MSMEs across Bangladesh."
       />
+      <PerspectiveImage />
     </div>
   );
 }
