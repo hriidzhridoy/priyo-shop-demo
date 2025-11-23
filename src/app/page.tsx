@@ -2,8 +2,8 @@
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import Preloader from "../components/Preloader/Preloader";
-import Nav from "@/components/Shared/Nav";
 import Newblock from "@/components/NewBlock/Newblock";
+import HeroText from "@/components/HeroText";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -40,6 +40,7 @@ export default function Home() {
         {isLoading && <Preloader key="preloader" />}
       </AnimatePresence>
       <Newblock className="pt-20 text-black" />
+      <HeroText />
     </main>
   );
 }
