@@ -40,7 +40,7 @@ export default function ScrollStepsTimeline() {
   return (
     <section
       ref={containerRef}
-      className="relative bg-white py-16 md:py-24 px-4"
+      className="relative bg-gradient-to-r from-[#fdfbff] via-[#fdf6ff] to-[#fdfbff] py-16 md:py-24 px-4"
     >
       <div className="mx-auto max-w-5xl text-center mb-10">
         <h2 className="text-2xl md:text-3xl font-semibold text-[#ff4050]">
