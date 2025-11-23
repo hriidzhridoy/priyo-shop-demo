@@ -9,23 +9,29 @@ import Footer from "../Footer";
 
 const links = [
   {
-    title: "Home",
-    href: "/",
-    src: "home.png",
-  },
-  {
-    title: "Shop",
-    href: "/shop",
-    src: "shop.png",
-  },
-  {
     title: "About Us",
     href: "/about",
     src: "home.png",
   },
+  // {
+  //   title: "Home",
+  //   href: "/",
+  //   src: "home.png",
+  // },
   {
-    title: "Lookbook",
-    href: "/lookbook",
+    title: "Brands",
+    href: "/brands",
+    src: "shop.png",
+  },
+
+  {
+    title: "Blogs",
+    href: "/blogs",
+    src: "lookbook.png",
+  },
+  {
+    title: "News",
+    href: "/news",
     src: "lookbook.png",
   },
   {

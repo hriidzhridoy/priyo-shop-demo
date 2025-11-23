@@ -39,7 +39,7 @@ export default function Home() {
       <AnimatePresence mode="wait">
         {isLoading && <Preloader key="preloader" />}
       </AnimatePresence>
-      <Newblock className="pt-20 text-black" />
+      {/* <Newblock className="pt-20 text-black" /> */}
       <HeroText />
     </main>
   );
