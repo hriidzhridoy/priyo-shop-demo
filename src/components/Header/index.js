@@ -1,13 +1,18 @@
 "use client";
 import styles from "./style.module.css";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { opacity } from "./anim";
 import Nav from "../Shared/Nav";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isActive, setIsActive] = useState(false);
+  const pathname = usePathname();
+  useEffect(() => {
+    setIsActive(false);
+  }, [pathname]);
 
   return (
     <div className={styles.header}>
@@ -43,9 +48,9 @@ export default function Header() {
           animate={!isActive ? "open" : "closed"}
           className={styles.shopContainer}
         >
-          <p className={styles.shop}>Shop</p>
+          {/* <p className={styles.shop}>Shop</p> */}
           <div className={styles.el}>
-            <svg
+            {/* <svg
               width="19"
               height="20"
               viewBox="0 0 19 20"
@@ -59,8 +64,8 @@ export default function Header() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               ></path>
-            </svg>
-            <p>Cart(0)</p>
+            </svg> */}
+            <p>Join Us</p>
           </div>
         </motion.div>
       </div>

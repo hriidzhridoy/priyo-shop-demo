@@ -42,7 +42,7 @@ const Section1 = ({ scrollYProgress }) => {
   return (
     <motion.div
       style={{ scale, rotate }}
-      className="sticky top-0 h-screen bg-[#C72626] text-white flex flex-col items-center justify-center px-6"
+      className="sticky top-0 h-screen bg-primary text-white flex flex-col items-center justify-center px-6"
     >
       <div className="w-full max-w-3xl space-y-12">
         {/* Vision Card */}

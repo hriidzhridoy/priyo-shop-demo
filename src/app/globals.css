@@ -232,3 +232,20 @@ body{
   }
 
 }
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* Optional: keep scrolling functional */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+@theme {
+    --color-primary: #ff4050;
+}
