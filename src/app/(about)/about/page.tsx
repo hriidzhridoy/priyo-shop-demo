@@ -1,5 +1,6 @@
 "use client";
 
+import MaskCursor from "@/components/Mask Cursor/page";
 import Preloader from "@/components/Preloader/Preloader";
 import { AnimatePresence } from "framer-motion";
 import { div } from "framer-motion/client";
@@ -40,7 +41,12 @@ export default function AboutPage() {
       <AnimatePresence mode="wait">
         {isLoading && <Preloader words={greetings} />}
       </AnimatePresence>
-      Hello
+      <MaskCursor
+        initialSize={40}
+        hoverSize={400}
+        text="A visual designer — with skills that haven't been replaced by AI yet."
+        bodyText={`I'm a <span>selectively skilled</span> product designer with a strong focus on impactful experiences.`}
+      />
     </div>
   );
 }
